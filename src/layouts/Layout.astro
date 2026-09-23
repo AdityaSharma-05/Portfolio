@@ -40,7 +40,7 @@ const { title, description, current = '' } = Astro.props;
     <footer class="site-footer">
       <div class="footer-top">
         <p class="eyebrow">Have an idea?</p>
-        <a class="footer-cta" href="mailto:[EMAIL]">Let's create<br /><em>something interesting.</em> <ArrowUpRight size={30} /></a>
+        <a class="footer-cta" href={`mailto:${site.email}`}>Let's create<br /><em>something interesting.</em> <ArrowUpRight size={30} /></a>
       </div>
       <div class="footer-bottom">
         <span>© {new Date().getFullYear()} {site.name}</span>

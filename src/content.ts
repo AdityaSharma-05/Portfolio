@@ -3,12 +3,12 @@ export const site = {
   shortName: 'AK',
   eyebrow: 'AI / ML / SOFTWARE DEVELOPMENT',
   intro: 'Building intelligent systems, experimenting with technology, and turning ideas into useful digital experiences.',
-  email: '[EMAIL]',
+  email: 'adityavip100@gmail.com',
   location: '[LOCATION]',
   socials: [
     { label: 'GitHub', href: 'https://github.com/AdityaSharma-05' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/adityakumar2027/' },
-    { label: 'Email', href: 'mailto:[EMAIL]' },
+    { label: 'Email', href: 'mailto:adityavip100@gmail.com' },
   ],
 };
 
