@@ -77,6 +77,18 @@ For a new project, use one of these values unless a new visual style is added in
 
 The homepage and projects page automatically use the same project data, so you do not need to edit both pages.
 
+## Automatically show ongoing GitHub projects
+
+The homepage includes a **Currently building** section.
+
+To add a public repository:
+
+1. Open the repository on GitHub.
+2. Add the topic `portfolio-ongoing`.
+3. Run the `Sync ongoing projects` workflow from the repository Actions tab, or wait for the daily sync.
+
+The workflow updates [`src/data/ongoing-projects.json`](./src/data/ongoing-projects.json) from repositories owned by `AdityaSharma-05`. It uses the repository name, description, primary language, update year, and GitHub URL. Forks and archived repositories are ignored.
+
 ## Add project images
 
 Place image files in:

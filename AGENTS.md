@@ -36,6 +36,9 @@ Main routes:
 - `src/components/ProjectList.astro` — reusable project presentation and project visuals
 - `src/components/Marquee.astro` — stationary editorial statement component
 - `src/styles/global.css` — complete visual system and responsive styles
+- `src/data/ongoing-projects.json` — generated list of active GitHub projects
+- `scripts/sync-ongoing-projects.mjs` — fetches public repositories tagged for the portfolio
+- `.github/workflows/sync-ongoing-projects.yml` — scheduled/manual GitHub sync workflow
 - `public/images/` — local image assets
 - `public/images/aditya-kumar.png` — transparent profile portrait used in the homepage hero
 
@@ -86,6 +89,19 @@ Existing project visual types:
 - `summary` — interactive text-summarization visualization
 
 If adding a new visual type, update both `ProjectList.astro` and `global.css`, and keep a graceful static fallback.
+
+## Ongoing projects automation
+
+The homepage has a `Currently building` section powered by `src/data/ongoing-projects.json`.
+
+To add a project to that section:
+
+1. Open the GitHub repository.
+2. Add the repository topic `portfolio-ongoing`.
+3. Keep the repository public.
+4. Run the **Sync ongoing projects** workflow manually, or wait for its daily run.
+
+The workflow reads public repositories from `AdityaSharma-05`, updates the generated JSON, commits the change, and pushes it to `main`. It excludes forks and archived repositories.
 
 ## Image rules
 

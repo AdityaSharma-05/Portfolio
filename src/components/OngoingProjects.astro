@@ -1,0 +1,19 @@
+---
+import { ArrowUpRight, Circle } from 'lucide-astro';
+import ongoingProjects from '../data/ongoing-projects.json';
+---
+<section class="ongoing section-pad reveal">
+  <div class="section-head">
+    <div><p class="eyebrow">04 / In progress</p><h2>Currently<br /><em>building.</em></h2></div>
+    <p class="section-side">Live projects and new ideas in motion. Updated from GitHub automatically.</p>
+  </div>
+  <div class="ongoing-list">
+    {ongoingProjects.map((project, index) => (
+      <a class="ongoing-item" href={project.html_url} target="_blank" rel="noreferrer">
+        <span class="ongoing-number">0{index + 1}</span>
+        <div class="ongoing-info"><h3>{project.name}</h3><p>{project.description}</p><div class="tag-list">{project.technologies.map((technology) => <span>{technology}</span>)}</div></div>
+        <span class="ongoing-state"><Circle size={10} fill="currentColor" /> Active <ArrowUpRight size={18} /></span>
+      </a>
+    ))}
+  </div>
+</section>
