@@ -61,7 +61,7 @@ em { color: var(--red); font-style: normal; }
 .ongoing-list { margin-top: 6rem; border-top: 1px solid var(--line); }
 .ongoing-item { display: grid; grid-template-columns: 5rem 1fr auto; align-items: center; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--line); transition: padding .3s, color .3s; }
 .ongoing-item:hover { padding-right: .8rem; padding-left: .8rem; color: var(--red); }
-.ongoing-number { color: var(--muted); font-size: .72rem; }
+.ongoing-number { color: var(--red); font-size: .68rem; font-weight: 600; letter-spacing: .08em; }
 .ongoing-info h3 { margin: 0 0 .7rem; color: var(--ink); font-size: clamp(1.6rem, 3vw, 3rem); font-weight: 400; letter-spacing: -.06em; text-transform: capitalize; }
 .ongoing-info p { max-width: 32rem; margin: 0 0 1rem; color: var(--muted); font-size: .82rem; line-height: 1.4; }
 .ongoing-state { display: flex; align-items: center; gap: .55rem; color: var(--red); font-size: .65rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }

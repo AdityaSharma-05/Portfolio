@@ -89,6 +89,8 @@ To add a public repository:
 
 The workflow updates [`src/data/ongoing-projects.json`](./src/data/ongoing-projects.json) from repositories owned by `AdityaSharma-05`. It uses the repository name, description, primary language, update year, and GitHub URL. Forks and archived repositories are ignored.
 
+When a project is complete, remove `portfolio-ongoing` and add `portfolio-completed` to the GitHub repository. It will automatically move into Selected Work and receive the next successive project number. Projects still in development show `WIP` rather than a number.
+
 ## Add project images
 
 Place image files in:

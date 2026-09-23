@@ -37,6 +37,7 @@ Main routes:
 - `src/components/Marquee.astro` — stationary editorial statement component
 - `src/styles/global.css` — complete visual system and responsive styles
 - `src/data/ongoing-projects.json` — generated list of active GitHub projects
+- `src/data/completed-projects.json` — generated list of completed GitHub projects
 - `scripts/sync-ongoing-projects.mjs` — fetches public repositories tagged for the portfolio
 - `.github/workflows/sync-ongoing-projects.yml` — scheduled/manual GitHub sync workflow
 - `public/images/` — local image assets
@@ -102,6 +103,8 @@ To add a project to that section:
 4. Run the **Sync ongoing projects** workflow manually, or wait for its daily run.
 
 The workflow reads public repositories from `AdityaSharma-05`, updates the generated JSON, commits the change, and pushes it to `main`. It excludes forks and archived repositories.
+
+To promote a project into Selected Work, remove the `portfolio-ongoing` topic and add `portfolio-completed`. The workflow then appends it after the curated projects and assigns the next successive number automatically. Active projects use `WIP` instead of a misleading project number.
 
 ## Image rules
 

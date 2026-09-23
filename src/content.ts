@@ -14,7 +14,6 @@ export const site = {
 
 export const projects = [
   {
-    number: '01',
     name: 'Generative Text Model',
     description: 'A machine-learning project focused on generating text using a language-model approach.',
     technologies: ['Python', 'Machine Learning', 'NLP'],
@@ -23,7 +22,6 @@ export const projects = [
     accent: 'model',
   },
   {
-    number: '02',
     name: 'Speech Recognition System',
     description: 'A speech recognition project designed to convert spoken input into text.',
     technologies: ['Python', 'Speech Recognition', 'AI'],
@@ -32,7 +30,6 @@ export const projects = [
     accent: 'voice',
   },
   {
-    number: '03',
     name: 'AI Text Summarizer',
     description: 'A graphical application that summarizes text using AI and NLP techniques.',
     technologies: ['Python', 'NLP', 'AI', 'GUI'],
