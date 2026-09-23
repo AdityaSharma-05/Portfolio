@@ -47,6 +47,6 @@ export const skills = [
 
 export const education = {
   degree: 'B.Tech AI/ML/DL',
-  college: '[COLLEGE NAME]',
-  years: '[START YEAR — END YEAR]',
+  college: 'Teerthanker Mahaveer University',
+  years: '2023 — 2027',
 };
