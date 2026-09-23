@@ -150,6 +150,7 @@ em { color: var(--red); font-style: normal; }
 blockquote { display: flex; align-items: flex-start; max-width: 58rem; margin: 4rem 0 0 14%; font-size: clamp(3rem, 7.4vw, 7.5rem); letter-spacing: -.075em; line-height: .86; }
 .quote-mark { flex: 0 0 auto; color: #ff9aad; font-size: .62em; font-weight: 500; line-height: .9; }
 .quote-copy { display: block; margin: 0 .18em; }
+.philosophy .quote-copy em { color: white; }
 .quote-close { align-self: flex-end; margin-bottom: .08em; }
 .projects-hero { min-height: 63vh; }
 .projects-page-list { padding-top: 0; }
