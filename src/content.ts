@@ -46,7 +46,7 @@ export const skills = [
 ];
 
 export const education = {
-  degree: 'B.Tech — Computer Science / related field',
+  degree: 'B.Tech AI/ML/DL',
   college: '[COLLEGE NAME]',
   years: '[START YEAR — END YEAR]',
 };
