@@ -1,0 +1,55 @@
+export const site = {
+  name: 'Aditya Kumar',
+  shortName: 'AK',
+  eyebrow: 'AI / ML / SOFTWARE DEVELOPMENT',
+  intro: 'Building intelligent systems, experimenting with technology, and turning ideas into useful digital experiences.',
+  email: '[EMAIL]',
+  location: '[LOCATION]',
+  socials: [
+    { label: 'GitHub', href: 'https://github.com/AdityaSharma-05' },
+    { label: 'LinkedIn', href: '[LINKEDIN URL]' },
+    { label: 'Email', href: 'mailto:[EMAIL]' },
+  ],
+};
+
+export const projects = [
+  {
+    number: '01',
+    name: 'Generative Text Model',
+    description: 'A machine-learning project focused on generating text using a language-model approach.',
+    technologies: ['Python', 'Machine Learning', 'NLP'],
+    year: '2024',
+    github: 'https://github.com/AdityaSharma-05/Generative-Text-Model',
+    accent: 'model',
+  },
+  {
+    number: '02',
+    name: 'Speech Recognition System',
+    description: 'A speech recognition project designed to convert spoken input into text.',
+    technologies: ['Python', 'Speech Recognition', 'AI'],
+    year: '2024',
+    github: 'https://github.com/AdityaSharma-05/Speech-Recognition-Systemm',
+    accent: 'voice',
+  },
+  {
+    number: '03',
+    name: 'AI Text Summarizer',
+    description: 'A graphical application that summarizes text using AI and NLP techniques.',
+    technologies: ['Python', 'NLP', 'AI', 'GUI'],
+    year: '2024',
+    github: 'https://github.com/AdityaSharma-05/ai-text-summarizer-gui',
+    accent: 'summary',
+  },
+];
+
+export const skills = [
+  'Python', 'Machine Learning', 'Deep Learning', 'Artificial Intelligence',
+  'Web Development', 'Git & GitHub', 'Database Fundamentals', 'Cloud Computing',
+  'Computer Science',
+];
+
+export const education = {
+  degree: 'B.Tech — Computer Science / related field',
+  college: '[COLLEGE NAME]',
+  years: '[START YEAR — END YEAR]',
+};

@@ -1,0 +1,5 @@
+---
+interface Props { text?: string; dark?: boolean }
+const { text = 'THINK CLEARLY / BUILD USEFULLY / KEEP LEARNING', dark = false } = Astro.props;
+---
+<div class:list={['marquee', { dark }]}><div>{text}</div></div>

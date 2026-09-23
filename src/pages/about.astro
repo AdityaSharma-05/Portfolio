@@ -1,0 +1,14 @@
+---
+import { ArrowUpRight } from 'lucide-astro';
+import Layout from '../layouts/Layout.astro';
+import Marquee from '../components/Marquee.astro';
+import { education, skills } from '../content';
+---
+<Layout title="ABOUT — ADITYA KUMAR" description="A little more about Aditya Kumar, his interests, skills, and current focus." current="about">
+  <section class="page-hero section-pad"><p class="eyebrow">About / 02</p><h1>About<br /><em>Aditya.</em></h1><p class="lede">A curious developer learning how to make complex things feel simple.</p></section>
+  <Marquee text="WHO I AM / WHAT I’M LEARNING / WHERE I’M GOING /" />
+  <section class="about-grid section-pad reveal"><p class="eyebrow">01 / Who I am</p><div class="rich-copy"><p>I’m a computer science student and builder interested in the ways technology can help us understand, communicate, and create.</p><p>My work sits somewhere between software development, artificial intelligence, and the occasional design rabbit hole. This is a placeholder biography — replace it with your own story when you’re ready.</p></div></section>
+  <section class="skills-section section-pad"><div class="section-head"><div><p class="eyebrow">02 / The toolkit</p><h2>Always<br /><em>learning.</em></h2></div><p class="section-side">The tools are always changing. The curiosity stays.</p></div><div class="skill-cloud">{skills.map((skill, index) => <span class="skill-pill reveal"><b>0{index + 1}</b>{skill}</span>)}</div></section>
+  <section class="details-grid section-pad reveal"><div><p class="eyebrow">03 / Education</p><h3>{education.degree}</h3><p>{education.college}<br />{education.years}</p></div><div><p class="eyebrow">04 / Current focus</p><h3>Artificial intelligence, machine learning, software development, and practical projects.</h3><a class="text-link" href="/projects">See the projects <ArrowUpRight size={16} /></a></div></section>
+  <section class="philosophy section-pad"><p class="eyebrow">05 / Personal philosophy</p><blockquote>“Make it useful.<br /><em>Make it yours.</em>”</blockquote></section>
+</Layout>

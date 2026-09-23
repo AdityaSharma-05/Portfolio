@@ -1,0 +1,78 @@
+---
+import { ArrowUpRight, Menu, X } from 'lucide-astro';
+import { site } from '../content';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  current?: string;
+}
+
+const { title, description, current = '' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="page-wash" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Aditya Kumar home"><span>{site.shortName}</span> {site.name}</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-icon"><Menu size={18} /></span><span class="menu-label">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a class:list={{ active: current === 'home' }} href="/">Home <span>01</span></a>
+        <a class:list={{ active: current === 'about' }} href="/about">About <span>02</span></a>
+        <a class:list={{ active: current === 'projects' }} href="/projects">Projects <span>03</span></a>
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <p class="eyebrow">Have an idea?</p>
+        <a class="footer-cta" href="mailto:[EMAIL]">Let's create<br /><em>something interesting.</em> <ArrowUpRight size={30} /></a>
+      </div>
+      <div class="footer-bottom">
+        <span>© {new Date().getFullYear()} {site.name}</span>
+        <span>Designed & built with curiosity.</span>
+        <div class="footer-links">{site.socials.map((social) => <a href={social.href}>{social.label}</a>)}</div>
+      </div>
+    </footer>
+    <div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.site-nav');
+      toggle?.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav?.classList.toggle('is-open', !open);
+        toggle.querySelector('.menu-icon').innerHTML = !open ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>' : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>';
+      });
+      const dot = document.querySelector('.cursor-dot');
+      const ring = document.querySelector('.cursor-ring');
+      window.addEventListener('pointermove', (event) => {
+        if (window.matchMedia('(pointer: coarse)').matches) return;
+        dot?.setAttribute('style', `transform: translate(${event.clientX}px, ${event.clientY}px)`);
+        ring?.setAttribute('style', `transform: translate(${event.clientX - 18}px, ${event.clientY - 18}px)`);
+      });
+      document.querySelectorAll('a, button').forEach((element) => {
+        element.addEventListener('mouseenter', () => document.body.classList.add('cursor-link'));
+        element.addEventListener('mouseleave', () => document.body.classList.remove('cursor-link'));
+      });
+      const reveal = new IntersectionObserver((entries) => entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      }), { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach((element) => reveal.observe(element));
+    </script>
+  </body>
+</html>
