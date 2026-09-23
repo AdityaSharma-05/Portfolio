@@ -8,7 +8,7 @@ export const site = {
   socials: [
     { label: 'GitHub', href: 'https://github.com/AdityaSharma-05' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/adityakumar2027/' },
-    { label: 'Email', href: 'mailto:adityavip100@gmail.com' },
+    { label: 'Email', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=adityavip100@gmail.com' },
   ],
 };
 
