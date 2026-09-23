@@ -45,7 +45,7 @@ const { title, description, current = '' } = Astro.props;
       <div class="footer-bottom">
         <span>© {new Date().getFullYear()} {site.name}</span>
         <span>Designed & built with curiosity.</span>
-        <div class="footer-links"><a href={`mailto:${site.email}`}>{site.email}</a>{site.socials.filter((social) => social.label !== 'Email').map((social) => <a href={social.href}>{social.label}</a>)}<a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${site.email}`} target="_blank" rel="noreferrer">Email</a></div>
+        <div class="footer-links">{site.socials.filter((social) => social.label !== 'Email').map((social) => <a href={social.href}>{social.label}</a>)}<a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${site.email}`} target="_blank" rel="noreferrer">Email</a></div>
       </div>
     </footer>
     <div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
