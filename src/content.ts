@@ -42,7 +42,7 @@ export const projects = [
 export const skills = [
   'Python', 'Machine Learning', 'Deep Learning', 'Artificial Intelligence',
   'Web Development', 'Git & GitHub', 'Database Fundamentals', 'Cloud Computing',
-  'Computer Science',
+  'Natural Language Processing',
 ];
 
 export const education = {
