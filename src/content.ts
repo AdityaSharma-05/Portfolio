@@ -7,7 +7,7 @@ export const site = {
   location: '[LOCATION]',
   socials: [
     { label: 'GitHub', href: 'https://github.com/AdityaSharma-05' },
-    { label: 'LinkedIn', href: '[LINKEDIN URL]' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/adityakumar2027/' },
     { label: 'Email', href: 'mailto:[EMAIL]' },
   ],
 };
