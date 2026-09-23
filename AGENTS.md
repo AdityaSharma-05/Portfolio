@@ -115,6 +115,18 @@ Use descriptive `alt` text for meaningful images. Decorative visuals should use 
 
 7. Do not remove or overwrite unrelated user changes.
 
+## Git publishing rule
+
+After every website change requested by the user:
+
+1. Run the relevant validation, normally `npm run build`.
+2. Stage only the files changed for that request.
+3. Create a clear Git commit describing the change.
+4. Push the commit to `origin/main`.
+5. Report the commit and push result to the user.
+
+Do not amend existing commits, force-push, or commit unrelated changes. If GitHub authentication, network access, conflicts, or another push issue blocks publishing, explain the issue clearly and ask the user how to proceed.
+
 ## Quality checklist
 
 Before finishing a change, confirm:
