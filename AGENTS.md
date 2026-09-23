@@ -6,6 +6,8 @@ This is a static Astro portfolio for Aditya Kumar.
 
 The site is a personal portfolio, not a SaaS product, dashboard, business site, or backend application.
 
+The portfolio is complete and production-ready. Future work should be limited to content updates, project updates, accessibility/performance improvements, and carefully scoped visual refinements.
+
 Main routes:
 
 - `/` — homepage
@@ -134,6 +136,17 @@ Use descriptive `alt` text for meaningful images. Decorative visuals should use 
 
 7. Do not remove or overwrite unrelated user changes.
 
+## Starting the project from scratch
+
+For the exact first-time setup and day-to-day commands, follow [`START_HERE.md`](./START_HERE.md). The short version is:
+
+```bash
+npm install
+npm run dev
+```
+
+Use `npm run build` before publishing or after any code/content change. Use `npm run preview` to inspect the generated production build locally.
+
 ## Git publishing rule
 
 After every website change requested by the user:
@@ -157,3 +170,9 @@ Before finishing a change, confirm:
 - Images load from valid paths.
 - Accessibility labels remain meaningful.
 - `npm run build` succeeds.
+
+## Documentation map
+
+- [`START_HERE.md`](./START_HERE.md) — exact setup, start, build, preview, troubleshooting, and publishing steps
+- [`README.md`](./README.md) — project overview and quick commands
+- [`WEBSITE_GUIDE.md`](./WEBSITE_GUIDE.md) — human editing guide

@@ -10,6 +10,8 @@ Personal portfolio website built with Astro, TypeScript, and modern CSS.
 
 ## Development
 
+For the complete setup instructions, including Windows prerequisites, clean installation, troubleshooting, production preview, and GitHub publishing, read [`START_HERE.md`](./START_HERE.md).
+
 ```bash
 npm install
 npm run dev
